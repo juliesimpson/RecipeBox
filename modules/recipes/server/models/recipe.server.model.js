@@ -16,6 +16,22 @@ var RecipeSchema = new Schema({
     required: 'Please fill Recipe name',
     trim: true
   },
+  category: {
+    type: String,
+    default: '',
+    required: 'Please select a category',
+    trim: true
+  },
+  link: {
+    type: String,
+    default: '',
+    required: 'Please fill Recipe link'
+  },
+  notes: {
+    type: String,
+    default: '',
+    required: 'Please fill in Recipe notes'
+  },
   created: {
     type: Date,
     default: Date.now

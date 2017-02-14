@@ -30,7 +30,7 @@ var RecipeSchema = new Schema({
   notes: {
     type: String,
     default: '',
-    required: 'Please fill in Recipe notes'
+    // required: 'Please fill in Recipe notes'
   },
   created: {
     type: Date,

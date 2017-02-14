@@ -2,6 +2,14 @@
   <div class="page-header">
     <h1 ng-bind="vm.recipe.name"></h1>
   </div>
+  <div class="pull-left">
+    <h3>Category:</h3>
+    <p ng-bind="vm.recipe.category"></p>
+    <h3>URL link:</h3>
+    <p><a ng-href="{{vm.recipe.link}}" target="_self">{{vm.recipe.link}}</a></p>
+    <h3>Notes:</h3>
+    <p ng-bind="vm.recipe.notes"></p>    
+  </div>
   <div class="pull-right"
        ng-show="vm.recipe.isCurrentUserOwner">
     <a class="btn btn-primary"

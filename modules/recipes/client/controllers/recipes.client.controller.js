@@ -17,6 +17,16 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+    vm.recipeOptions = [
+      'Appetizer',
+      'Beverages',
+      'Breakfast',
+      'Dessert',
+      'Meat',
+      'Seafood',
+      'Soups',
+      'Vegetables'
+    ];
 
     // Remove existing Recipe
     function remove() {

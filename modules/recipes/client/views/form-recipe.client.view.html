@@ -14,15 +14,7 @@
         </div>
         <div class="form-group" show-errors>
           <label class="control-label" for="category">Recipe Category</label>
-          <select ng-model="vm.recipe.category" class="form-control" id="category" placeholder="Select a category" required=>
-           <option value="1">Appetizer</option>
-           <option value="2">Beverages</option>
-           <option value="3">Breakfast</option>
-           <option value="4">Dessert</option>
-           <option value="5">Meat</option>
-           <option value="6">Seafood</option>
-           <option value="7">Soups</option>
-           <option value="8">Vegetables</option>
+          <select ng-model="vm.recipe.category" ng-options="recipe for recipe in vm.recipeOptions" class="form-control" id="category" placeholder="Select a category" required=>
           </select>
           <div ng-messages="vm.form.recipeForm.category.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Recipe category is required.</p>
@@ -35,7 +27,7 @@
             <p class="help-block error-text" ng-message="required">Recipe URL is required.</p>
           </div>
         </div>
-        <div class="form-group" show-errors>
+        <div class="form-group">
           <label class="control-label" for="notes">Notes</label>
           <textarea ng-model="vm.recipe.notes" class="form-control" id="notes"></textarea>
         </div>

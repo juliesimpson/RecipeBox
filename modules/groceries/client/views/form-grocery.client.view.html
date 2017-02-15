@@ -1,0 +1,54 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.grocery._id ? 'Edit Grocery' : 'New Grocery List'}}</h1>
+  </div>
+  <div class="col-md-6">
+    <form name="vm.form.groceryForm" class="form-horizontal" ng-submit="vm.save(vm.form.groceryForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Grocery List Name</label>
+          <input name="name" type="text" ng-model="vm.grocery.name" id="name" class="form-control" placeholder="Enter Grocery List Name" required>
+          <div ng-messages="vm.form.groceryForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Grocery List Name is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="item">Grocery Item</label>
+          <input name="item" type="text" ng-model="vm.grocery.item" id="item" class="form-control" placeholder="Enter Item" required>
+          <div ng-messages="vm.form.groceryForm.item.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Grocery Item is required.</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="quantity">Item Quantity</label>
+          <input name="quantity" type="text" ng-model="vm.grocery.quantity" id="quantity" class="form-control" placeholder="Enter item quantity" required>
+          <div ng-messages="vm.form.groceryForm.quantity.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Item quantity is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">Add Item</button>
+          <button type="submit" class="btn btn-default">{{vm.grocery._id ? 'Update List' : 'Create New List'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="col-md-6">
+    <h3>Grocery List</h3>
+    <div class="card">
+        <ul>
+           <li>
+             
+           </li> 
+        </ul>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+</section>

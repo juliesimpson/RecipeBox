@@ -17,6 +17,7 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+    // array for recipe category types
     vm.recipeOptions = [
       'Appetizer',
       'Beverages',

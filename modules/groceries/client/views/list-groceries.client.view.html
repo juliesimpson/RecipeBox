@@ -4,6 +4,7 @@
   </div>
   <div class="list-group">
     <a ng-repeat="grocery in vm.groceries"
+       ng-if="vm.user._id == grocery.user._id" 
        ui-sref="groceries.view({ groceryId: grocery._id })"
        class="list-group-item">
       <small class="list-group-item-text">

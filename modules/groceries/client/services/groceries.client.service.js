@@ -5,6 +5,7 @@
   angular
     .module('groceries')
     .factory('GroceriesService', GroceriesService);
+    
 
   GroceriesService.$inject = ['$resource'];
 

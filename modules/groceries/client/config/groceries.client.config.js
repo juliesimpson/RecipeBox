@@ -10,7 +10,7 @@
   function menuConfig(Menus) {
     // Set top bar menu items
     Menus.addMenuItem('topbar', {
-      title: 'Groceries',
+      title: 'Grocery List',
       state: 'groceries',
       type: 'dropdown',
       roles: ['*']
@@ -18,13 +18,13 @@
 
     // Add the dropdown list item
     Menus.addSubMenuItem('topbar', 'groceries', {
-      title: 'List Groceries',
+      title: 'Show Grocery Lists',
       state: 'groceries.list'
     });
 
     // Add the dropdown create item
     Menus.addSubMenuItem('topbar', 'groceries', {
-      title: 'Create Grocery',
+      title: 'Create Grocery List',
       state: 'groceries.create',
       roles: ['user']
     });

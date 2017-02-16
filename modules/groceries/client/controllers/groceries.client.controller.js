@@ -17,6 +17,15 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+    vm.groceryList = [];
+    vm.addItem = addItem;
+     
+    // add items to list array
+    function addItem(item) {
+      vm.groceryList.push(item);
+
+      item = '';
+    }
 
     // Remove existing Grocery
     function remove() {

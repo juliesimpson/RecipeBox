@@ -16,14 +16,14 @@ var GrocerySchema = new Schema({
     required: 'Please fill Grocery List name',
     trim: true
   },
-  item: {
+  groceryitem: {
     type: String,
     default: '',
     required: 'Please fill Item name',
     trim: true
   },
   quantity: {
-    type: Number,
+    type: String,
     default: '',
     required: 'Please fill Item quantity'
   },
@@ -35,6 +35,11 @@ var GrocerySchema = new Schema({
     type: Schema.ObjectId,
     ref: 'User'
   }
+  // items: {
+  //   type: Array,
+  //   default: [],
+  //   required: 'Please enter grocery items'
+  // }
 });
 
 mongoose.model('Grocery', GrocerySchema);

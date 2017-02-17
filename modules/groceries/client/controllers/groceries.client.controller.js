@@ -20,13 +20,7 @@
     vm.groceryList = [];
     vm.addItem = addItem;
      
-    // add items to list array
-    function addItem(item) {
-      vm.groceryList.push(item);
-
-      item = '';
-    }
-
+    
     // Remove existing Grocery
     function remove() {
       if ($window.confirm('Are you sure you want to delete?')) {
@@ -34,8 +28,17 @@
       }
     }
 
+    // add items to list array
+    function addItem(isValid) {
+      vm.groceryList.push(vm.grocery.item);
+
+      vm.grocery.item = '';
+    }
+
     // Save Grocery
     function save(isValid) {
+      vm.grocery.items = vm.groceryList;
+
       if (!isValid) {
         $scope.$broadcast('show-errors-check-validity', 'vm.form.groceryForm');
         return false;
@@ -43,9 +46,14 @@
 
       // TODO: move create/update logic to service
       if (vm.grocery._id) {
-        vm.grocery.$update(successCallback, errorCallback);
+
+        vm.grocery.$update().then(
+          $state.go('groceries.list')
+          );
       } else {
-        vm.grocery.$save(successCallback, errorCallback);
+        vm.grocery.$save().then(
+          $state.go('groceries.list')
+          );
       }
 
       function successCallback(res) {

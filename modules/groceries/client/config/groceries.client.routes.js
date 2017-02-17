@@ -42,7 +42,8 @@
         controller: 'GroceriesController',
         controllerAs: 'vm',
         resolve: {
-          groceryResolve: getGrocery
+          groceryResolve: getGrocery,
+          
         },
         data: {
           roles: ['user', 'admin'],

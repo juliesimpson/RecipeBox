@@ -2,6 +2,13 @@
   <div class="page-header">
     <h1 ng-bind="vm.grocery.name"></h1>
   </div>
+  <div class="pull-left">
+    <ul >
+      <li ng-repeat="item in vm.grocery.items">
+        {{item}}  
+      </li> 
+    </ul>  
+  </div>
   <div class="pull-right"
        ng-show="vm.grocery.isCurrentUserOwner">
     <a class="btn btn-primary"
@@ -13,12 +20,12 @@
     </a>
   </div>
   <small>
-    <em class="text-muted">
+    <!-- <em class="text-muted">
       Posted on
       <span ng-bind="vm.grocery.created | date:'mediumDate'"></span>
       by
       <span ng-if="vm.grocery.user"
-            ng-bind="vm.grocery.user.displayName"></span>
+            ng-bind="vm.grocery.user.displayName"></span> -->
       <span ng-if="!vm.grocery.user">Deleted User</span>
     </em>
   </small>

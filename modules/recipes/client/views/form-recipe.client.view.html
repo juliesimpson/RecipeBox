@@ -12,6 +12,15 @@
             <p class="help-block error-text" ng-message="required">Recipe name is required.</p>
           </div>
         </div>
+        
+        <div class="form-group" show-errors>
+          <label class="control-label" for="link">Recipe URL</label>
+          <input name="link" type="text" ng-model="vm.recipe.link" id="link" class="form-control" placeholder="Enter recipe URL" required>
+          <div ng-messages="vm.form.recipeForm.link.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Recipe URL is required.</p>
+          </div>
+        </div>
+
         <div class="form-group" show-errors>
           <label class="control-label" for="category">Recipe Category</label>
           <select ng-model="vm.recipe.category" ng-options="recipe for recipe in vm.recipeOptions" class="form-control" id="category" placeholder="Select a category" required=>
@@ -20,13 +29,7 @@
             <p class="help-block error-text" ng-message="required">Recipe category is required.</p>
           </div>
         </div>
-        <div class="form-group" show-errors>
-          <label class="control-label" for="link">Recipe URL</label>
-          <input name="link" type="text" ng-model="vm.recipe.link" id="link" class="form-control" placeholder="Enter recipe URL" required>
-          <div ng-messages="vm.form.recipeForm.link.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Recipe URL is required.</p>
-          </div>
-        </div>
+        
         <div class="form-group">
           <label class="control-label" for="notes">Notes</label>
           <textarea ng-model="vm.recipe.notes" class="form-control" id="notes"></textarea>

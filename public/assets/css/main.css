@@ -1,0 +1,27 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.home-image {
+	background-image: url('../images/greekfood.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	width: 1366px;
+	height: 853px;
+}
+
+.home-title {
+	font-family: 'Lato', sans-serif;
+	font-size: 74px;
+	font-weight: bold;
+	color: white;
+	text-align: center;
+	padding-top: 150px;
+}
+
+.app-description {
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}

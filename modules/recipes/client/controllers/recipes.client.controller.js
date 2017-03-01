@@ -24,6 +24,7 @@
       'Breakfast',
       'Dessert',
       'Meat',
+      'Pasta',
       'Seafood',
       'Soups',
       'Vegetables'
